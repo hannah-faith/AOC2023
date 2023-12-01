@@ -1,15 +1,7 @@
-file_path = "input.txt"  # Replace with the actual path to your file
+file_path = "Day 1/input.txt"
 
-try:
-    with open(file_path, 'r') as file:
-        lines_array = [line.strip() for line in file.readlines()]
-
-except FileNotFoundError:
-    print(f"File not found: {file_path}")
-
-except Exception as e:
-    print(f"An error occurred: {e}")
-
+with open(file_path, 'r') as file:
+    lines_array = [line.strip() for line in file.readlines()]
 
 nums = []
 
