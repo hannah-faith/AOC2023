@@ -22,10 +22,10 @@ for lin in lines_array:
     for word in numWords:
         spelled = word[0]
         actual = word[1]
-        indexes = [index for index in range(len(lin)) if lin.startswith(spelled, index)]
+        indices = [index for index in range(len(lin)) if lin.startswith(spelled, index)]
 
-        if len(indexes) > 0:
-            for eachInd in indexes:
+        if len(indices) > 0:
+            for eachInd in indices:
                 tempArray.append((actual, eachInd))
 
     sorted_list = sorted(tempArray, key=lambda x: x[1])
