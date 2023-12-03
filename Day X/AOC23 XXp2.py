@@ -1,4 +1,4 @@
-file_path = "Day 2/test2.txt"
+file_path = "Day X/test.txt"
 
 with open(file_path, 'r') as file:
     lines_array = [line.strip() for line in file.readlines()]
