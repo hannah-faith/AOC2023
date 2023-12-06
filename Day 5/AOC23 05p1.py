@@ -70,4 +70,3 @@ for seed in seeds:
 
 locations.sort()
 print(locations[0])
-print(f"locations: {locations[0]} compares to 525792406: {locations[0] == 525792406}")
