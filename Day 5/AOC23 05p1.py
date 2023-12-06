@@ -42,7 +42,7 @@ def mapper(dictionary, element):
     for key, value in dictionary.items():
         lower_range = int(value[0])
         upper_range = int(value[0]) + int(value[1])
-        if lower_range <= element <= upper_range:
+        if lower_range <= element < upper_range:
             diff = element - lower_range
             return int(key) + diff
     else:
@@ -70,8 +70,4 @@ for seed in seeds:
 
 locations.sort()
 print(locations[0])
-
-
-
-
-
+print(f"locations: {locations[0]} compares to 525792406: {locations[0] == 525792406}")

@@ -1,4 +1,4 @@
-file_path = "Day 5/test.txt"
+file_path = "Day 5/input2.txt"
 
 with open(file_path, 'r') as file:
     lines_array = [line.strip() for line in file.readlines()]
@@ -18,7 +18,7 @@ def mapper(dictionary, element):
     for key, value in dictionary.items():
         lower_range = int(value[0])
         upper_range = int(value[0]) + int(value[1])
-        if lower_range <= element <= upper_range:
+        if lower_range <= element < upper_range:
             diff = element - lower_range
             return int(key) + diff
     else:
@@ -83,5 +83,6 @@ for seed in seeds_tuples:
 
         if smallest_location == -1 or location < smallest_location:
             smallest_location = location
+            print(f"smallest_location: {smallest_location}")
 
 print(smallest_location)
