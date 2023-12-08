@@ -22,7 +22,6 @@ def create_node_dict(node_map):
 create_node_dict(lines_array)
 current_nodes = []
 for key in node_dictionary:
-    key_to_check = key
     if key[2] == "A":
         current_nodes.append(key)
 
