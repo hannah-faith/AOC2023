@@ -15,6 +15,7 @@ compare_list = []
 index = 0
 
 for each in history_list:
+    each.reverse()
     store_list.append([each])
     compare_list = each
 
@@ -30,21 +31,13 @@ for each in history_list:
 
         compare_list = temp_list
         store_list[index].append(temp_list)
-
     index += 1
     compare_list = []
 
-temp_one = 0
-
-for i in range(len(store_list)):
-    store_list[i].reverse()
-
-    for j in range(len(store_list[i]) - 1):
-        first_num = temp_one
-        second_num = int(store_list[i][j + 1][0])
-        temp_one = second_num - first_num
-
-    sum += temp_one
-    temp_one = 0
+for each in store_list:
+    last = 0
+    for inner in each:
+        last += int(inner[-1])
+    sum += last
 
 print(f"sum: {sum}")
